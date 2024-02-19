@@ -337,14 +337,14 @@ func (b *Box) makeSubBoxes() [8]Box {
 	center := b.min.Lerp(&b.max, 0.5)
 
 	return [8]Box{
-		Box{Vector3f{b.min[1], b.min[1], b.min[2]}, Vector3f{center[0], center[1], center[2]}},
-		Box{Vector3f{center[1], b.min[1], b.min[2]}, Vector3f{b.max[0], center[1], center[2]}},
-		Box{Vector3f{b.min[1], center[1], b.min[2]}, Vector3f{center[0], b.max[1], center[2]}},
-		Box{Vector3f{center[1], center[1], b.min[2]}, Vector3f{b.max[0], b.max[1], center[2]}},
-		Box{Vector3f{b.min[1], b.min[1], center[2]}, Vector3f{center[0], center[1], b.max[2]}},
-		Box{Vector3f{center[1], b.min[1], center[2]}, Vector3f{b.max[0], center[1], b.max[2]}},
-		Box{Vector3f{b.min[1], center[1], center[2]}, Vector3f{center[0], b.max[1], b.max[2]}},
-		Box{Vector3f{center[1], center[1], center[2]}, Vector3f{b.max[0], b.max[1], b.max[2]}},
+		Box{Vector3f{b.min[0], b.min[1], b.min[2]}, Vector3f{center[0], center[1], center[2]}},
+		Box{Vector3f{center[0], b.min[1], b.min[2]}, Vector3f{b.max[0], center[1], center[2]}},
+		Box{Vector3f{b.min[0], center[1], b.min[2]}, Vector3f{center[0], b.max[1], center[2]}},
+		Box{Vector3f{center[0], center[1], b.min[2]}, Vector3f{b.max[0], b.max[1], center[2]}},
+		Box{Vector3f{b.min[0], b.min[1], center[2]}, Vector3f{center[0], center[1], b.max[2]}},
+		Box{Vector3f{center[0], b.min[1], center[2]}, Vector3f{b.max[0], center[1], b.max[2]}},
+		Box{Vector3f{b.min[0], center[1], center[2]}, Vector3f{center[0], b.max[1], b.max[2]}},
+		Box{Vector3f{center[0], center[1], center[2]}, Vector3f{b.max[0], b.max[1], b.max[2]}},
 	}
 }
 
